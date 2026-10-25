@@ -66,7 +66,7 @@ test('no part of the office imports main.ts: it only puts them together', () => 
 test('the 2D view loads no three.js, and none of the 3D office: what it shares with it is three.js-free', () => {
   const lite = graph(path.join(client, 'lite.ts'));
   for (const f of lite) {
-    const rel = path.relative(client, f);
+    const rel = path.relative(client, f).split(path.sep).join('/');
     assert.doesNotMatch(read(f), /from 'three(?:\/[^']*)?'/, `${rel} (loaded by lite.ts) imports three.js`);
     assert.ok(!/^(core|features|input|world|player)\//.test(rel), `lite.ts loads ${rel}, part of the 3D office`);
   }

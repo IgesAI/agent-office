@@ -1,0 +1,109 @@
+{
+  "viewport": [
+    1440,
+    960
+  ],
+  "dpr": 1,
+  "results": [
+    {
+      "view": "workstation",
+      "readyMs": 1938,
+      "facts": {
+        "view": "workstation",
+        "calls": 2539,
+        "triangles": 465313,
+        "geometries": 877,
+        "textures": 44,
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 3060 Laptop GPU (0x00002520) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "revision": "186"
+      },
+      "metrics": {
+        "samples": 120,
+        "fps": 74.99531279295041,
+        "frameMsP50": 13.300000000000182,
+        "frameMsP95": 13.5,
+        "cpuSubmitMsP95": 13.400000005960464,
+        "calls": 2539,
+        "triangles": 465313,
+        "geometries": 877,
+        "textures": 44
+      },
+      "errors": []
+    },
+    {
+      "view": "overview",
+      "readyMs": 1397,
+      "facts": {
+        "view": "overview",
+        "calls": 2224,
+        "triangles": 338055,
+        "geometries": 814,
+        "textures": 35,
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 3060 Laptop GPU (0x00002520) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "revision": "186"
+      },
+      "metrics": {
+        "samples": 120,
+        "fps": 74.99531279295044,
+        "frameMsP50": 13.300000000000182,
+        "frameMsP95": 13.5,
+        "cpuSubmitMsP95": 11.5,
+        "calls": 2224,
+        "triangles": 338055,
+        "geometries": 814,
+        "textures": 35
+      },
+      "errors": []
+    },
+    {
+      "view": "lounge",
+      "readyMs": 1306,
+      "facts": {
+        "view": "lounge",
+        "calls": 1289,
+        "triangles": 259249,
+        "geometries": 720,
+        "textures": 22,
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 3060 Laptop GPU (0x00002520) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "revision": "186"
+      },
+      "metrics": {
+        "samples": 120,
+        "fps": 74.99999999999999,
+        "frameMsP50": 13.300000000000182,
+        "frameMsP95": 13.400000000000091,
+        "cpuSubmitMsP95": 7.5,
+        "calls": 1289,
+        "triangles": 259249,
+        "geometries": 720,
+        "textures": 22
+      },
+      "errors": []
+    },
+    {
+      "view": "meeting",
+      "readyMs": 1321,
+      "facts": {
+        "view": "meeting",
+        "calls": 1622,
+        "triangles": 345229,
+        "geometries": 800,
+        "textures": 30,
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 3060 Laptop GPU (0x00002520) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "revision": "186"
+      },
+      "metrics": {
+        "samples": 120,
+        "fps": 74.99531279295044,
+        "frameMsP50": 13.300000000000182,
+        "frameMsP95": 13.5,
+        "cpuSubmitMsP95": 10.699999988079071,
+        "calls": 1622,
+        "triangles": 345229,
+        "geometries": 800,
+        "textures": 30
+      },
+      "errors": []
+    }
+  ]
+}

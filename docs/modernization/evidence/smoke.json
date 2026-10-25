@@ -1,0 +1,29 @@
+{
+  "state": {
+    "floor": "headquarters",
+    "floors": 1,
+    "workers": 0,
+    "admin": true
+  },
+  "shellTerminal": true,
+  "testShellRemoved": true,
+  "meetingControls": true,
+  "messages": [
+    "welcome",
+    "gh.issues",
+    "gh.pulls",
+    "floors",
+    "pong",
+    "worker.update",
+    "machine",
+    "toast",
+    "screen",
+    "peer.update",
+    "term.snapshot",
+    "term.data",
+    "worker.remove",
+    "dog"
+  ],
+  "errors": [],
+  "lite": "headquarters · Agent Office"
+}

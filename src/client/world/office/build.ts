@@ -15,6 +15,7 @@ import { green, tee } from '../../features/golf/world';
 import { stack } from '../stack';
 import { tower } from '../tower';
 import { hoop } from '../../features/basketball/world';
+import { headquarters } from '../../features/headquarters/world';
 import { kitchen } from '../kitchen';
 import { signs } from '../desksigns';
 import type { Collider, DeskView, Interactable, Office, OfficeHandles } from '../types';
@@ -49,6 +50,7 @@ function floorPlan() {
     plug,
     tower,
     desks,
+    headquarters,
     beanbags,
     kiosks,
     boards,

@@ -38,6 +38,8 @@ export default defineConfig({
   root: resolve(import.meta.dirname, 'src/client'),
   publicDir: resolve(import.meta.dirname, 'src/client/public'),
   plugins: [excalidrawFonts()],
+  // This app uses plain CSS. Do not inherit an unrelated workspace/home PostCSS config.
+  css: { postcss: { plugins: [] } },
   define: {
     __EXCALIDRAW_ASSETS__: JSON.stringify(EXCALIDRAW_ASSETS),
   },
