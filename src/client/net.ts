@@ -1,11 +1,13 @@
 import type { ClientMsg, ServerMsg } from '../shared/protocol';
 import { lastFloor, store, type Profile, type Spot } from './state';
+import { loginDestination } from '../shared/entry';
 
 type Handler = (msg: ServerMsg) => void;
 
 /** The sign-in page, coming back to the 2D view afterwards if that's where you are (see login.ts). */
 export function loginUrl(): string {
-  return location.pathname === '/lite' ? '/login?next=/lite' : '/login';
+  const next=loginDestination(location.pathname);
+  return next==='/'?'/login':`/login?next=${next}`;
 }
 
 export class Net {

@@ -9,6 +9,7 @@ import { githubRoutes } from './github.js';
 import { pageRoutes } from './pages.js';
 import { searchRoutes } from './search.js';
 import { serviceRoutes } from './services.js';
+import { simulationRoutes } from './simulation.js';
 
 export const routes: readonly Route[] = [
   // Anyone.
@@ -27,6 +28,7 @@ export const routes: readonly Route[] = [
   pageRoutes.favicon,
   // Signed in.
   authRoutes.whoami,
+  simulationRoutes.roster,
   agentRoutes.models,
   fileRoutes.image,
   fileRoutes.whiteboardFile,
@@ -37,6 +39,7 @@ export const routes: readonly Route[] = [
   serviceRoutes.forwards,
   githubRoutes.github,
   pageRoutes.office,
+  pageRoutes.classic,
   pageRoutes.lite,
   pageRoutes.bundle,
 ];

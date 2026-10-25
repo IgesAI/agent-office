@@ -55,6 +55,7 @@ export default defineConfig({
       },
       input: {
         main: resolve(import.meta.dirname, 'src/client/index.html'),
+        office: resolve(import.meta.dirname, 'src/client/office.html'),
         lite: resolve(import.meta.dirname, 'src/client/lite.html'),
         login: resolve(import.meta.dirname, 'src/client/login.html'),
         claim: resolve(import.meta.dirname, 'src/client/claim.html'),

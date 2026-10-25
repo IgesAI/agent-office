@@ -8,6 +8,8 @@ There are three parts: `src/client` (the page, built by Vite, with three.js), `s
 
 ## Client
 
+`index.html` / `simulation.ts` compose the separate overhead house in `simulation/`: camera, authored scenery, resident presentation, movement, roster reconciliation and UI. It uses its own renderer and no player/pointer-lock lifecycle. The original client composition remains `main.ts`, now reached through `office.html`. This preserves the execution/terminal infrastructure. The simulation's API plugs into the HTTP route registry; its versioned projection is `shared/simulation.ts`, with account-scoped file reading in `server/simulation/`. The optional read-only external bridge lives under `scripts/` and is not bundled into either browser.
+
 ### `main.ts` and the context
 
 `src/client/main.ts` is the install list: it makes the scene, calls each part's `install…(ctx, …)` in turn, and boots. The order is the order everything registers in (messages, keys, ticks, store topics), and it's kept on purpose, so a new feature's line goes at the end of its group unless it has to come before something.

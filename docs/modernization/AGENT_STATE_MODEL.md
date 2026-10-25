@@ -1,5 +1,13 @@
 # Agent state model — existing behavior and next boundary
 
+## Simulation projection
+
+`shared/simulation.ts` now defines a separate read-only Grok Bot projection. Stable provider ID and exact name identify a resident. `unknown`, `idle`, `working`, `waiting`, `error` and `offline` stay distinct. Both snapshot and individual observations expire at 45 seconds; unavailable state cannot become idle. Only a complete successful roster removes identities. Lost/invalid/partial connections retain the known household with unknown activity. A working Bot goes to an activity landmark only when the producer explicitly supplies the category; names, roles and task text are not classifiers. Explicit idle reserves a bed. Reservations are stable by ID, finite, and released when a Bot leaves.
+
+The optional unofficial roster bridge provides identity only and therefore emits `unknown`. No live execution status is inferred. The browser's locomotion and poses are cosmetic. Current bridge and future activity boundaries are documented in [the Grok Bot guide](../grok-bot.md). The original worker model below remains separate and unchanged.
+
+## Original workstation increment
+
 No authoritative execution-state changes in this increment.
 
 Existing WorkerInfo has a worker ID, provider/model/effort, optional provider session ID, desk ID, name/color, task/prompt, worktree/PR data, creation/waiting timestamps, status and optional usage. A process may exit while its session remains resumable. An independent persistent person/profile ID does not yet exist for workers.

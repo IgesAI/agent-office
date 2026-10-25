@@ -1,0 +1,13 @@
+{
+  "base": "http://127.0.0.1:4600",
+  "viewport": [
+    1440,
+    960
+  ],
+  "dpr": 1,
+  "readyMs": 432,
+  "fps": 74.06489200161145,
+  "p95FrameMs": 13.5,
+  "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 3060 Laptop GPU (0x00002520) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+  "bots": 0
+}

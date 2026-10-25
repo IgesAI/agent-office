@@ -1,5 +1,14 @@
 # Modernization changelog
 
+## 2026-10-24 — bird's-eye house increment
+
+- Branched from freshly fetched fork main at `9da3ac0`, after the workstation PR was merged.
+- Made the overhead house the default page, preserving Classic office and the 2D view with safe post-login destinations.
+- Added seven task landmarks, original modeled furnishings, softened lighting, instanced flooring and resident animation/selection.
+- Added a versioned, authenticated, account-scoped roster projection with stale/error reconciliation and explicit unknown activity.
+- Prepared an optional pinned read-only Grok Bot bridge; the user chose to leave it disconnected. No live task activity claim is made.
+- Verified 36 focused tests, typecheck, build, real local login/API/file/UI flow, mobile layout, Classic office and labeled animation fixtures. Full-suite Windows limitations remain recorded in the simulation report.
+
 ## 2026-10-24 — audit and first visual increment
 
 - Verified IgesAI fork, fetched base 852e2ab and created an isolated feature worktree.

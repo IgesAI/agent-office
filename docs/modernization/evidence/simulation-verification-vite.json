@@ -1,0 +1,18 @@
+{
+  "base": "http://127.0.0.1:5173",
+  "passed": [
+    "auth gate",
+    "empty roster",
+    "modal Escape and close",
+    "camera controls",
+    "seven synthetic activity stations",
+    "Bot selection",
+    "rename",
+    "failed poll retains identities",
+    "stale poll clears activity",
+    "deletion",
+    "390px layout",
+    "Classic office renders"
+  ],
+  "errors": []
+}

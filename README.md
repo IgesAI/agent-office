@@ -9,7 +9,7 @@
 
 # 🏢 Agent Office
 
-**A 3D office your team shares with its coding agents.**
+**A bird's-eye home for your Bots, with the original shared coding office still available.**
 
 Sit **Claude Code**, **Codex**, **OpenCode**, **Grok**, **Muse**, **DeepSeek Harness** and **Cursor** workers at desks, watch each one's terminal on the laptop in front of it,
 and jump into any of them together. Every GitHub repo is a floor of the building.
@@ -32,7 +32,9 @@ curl -fsSL https://raw.githubusercontent.com/AgentSystemLabs/agent-office/main/i
 
 ## What it is
 
-This fork begins a headquarters visual refresh with two walnut workstations, upholstered chairs and monitors that mirror the existing terminal stream. Agent controls and the rest of the office retain their current behavior. See the [modernization report](docs/modernization/DELIVERY_REPORT.md) for before/after screenshots, architecture decisions, measurements and the remaining work.
+This fork now opens **Bot House**, a bird's-eye simulation with a coding studio, kitchen, rest nook, library, globe, planning board and common room. Pan, zoom and watch named Bots move between spaces. The house starts empty; an optional, experimental Grok Bot roster bridge adds your real Bots. Its roster currently supplies identities, not reliable task activity, so connected Bots wander with “Activity unavailable.” See [Bot House setup and limitations](docs/grok-bot.md).
+
+The original first-person office, its agent controls and live terminal workstations remain at **`/office.html`**, linked as Classic office. The 2D view remains at `/lite`. See the [simulation delivery report](docs/modernization/SIMULATION_REPORT.md) and the [earlier workstation report](docs/modernization/DELIVERY_REPORT.md).
 
 For a deterministic visual review, run `npx vite --host 127.0.0.1` and open `http://127.0.0.1:5173/lab/headquarters.html?view=workstation`. This development-only page builds the real office without starting agents. It also supports `overview`, `lounge` and `meeting` views. See the [verification instructions](docs/modernization/PERFORMANCE_BENCHMARKS.md) for the live service check.
 
