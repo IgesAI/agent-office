@@ -1,5 +1,9 @@
 # Features
 
+## Bot House simulation
+
+The default view is now an overhead, cutaway house with pan, zoom, rotation, Bot selection and seven task landmarks. It starts empty. An optional, explicitly enabled Grok Bot bridge syncs your personal Bot names; that unofficial roster does not expose reliable task activity, so Bots wander with activity marked unavailable. Station animations are ready for a verified activity source. The [setup guide](grok-bot.md) explains the connection and its limits. Classic office is at `/office.html`; the features below describe that original office.
+
 ## Headquarters workstation preview
 
 On the office map, desks 1 and 2 use original Blender furniture: walnut work surfaces, graphite frames, bronze hardware, task lamps and teal upholstered chairs. Their monitors mirror the same authenticated terminal frames as the existing laptops, with the actual worker name and status. A disconnected monitor shows a waiting message until a fresh office snapshot arrives. Missing furniture assets leave the original desks usable. Desk IDs, collision bounds, seat/laptop anchors and the existing controls remain in place.

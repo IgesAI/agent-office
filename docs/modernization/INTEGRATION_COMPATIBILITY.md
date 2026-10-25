@@ -1,5 +1,13 @@
 # Integration compatibility
 
+## Simulation increment
+
+The new default page reads an authenticated, account-scoped `/api/simulation` projection. It does not start workers or replace the worker store, WebSocket protocol, hooks, task queue or CLI providers. Classic office remains at `/office.html`; safe login destinations preserve that view and `/lite`. The overhead page uses no pointer lock. Its dialogs return focus to the canvas with a free pointer, following the user's new interaction direction.
+
+An optional **unofficial** Grok Bot roster bridge is supplied for source checkouts, disabled unless explicitly invoked. It uses a pinned external SDK and fresh login, a three-endpoint read-only network allowlist, in-memory tokens, scoped snapshots and bounded responses. No desktop credentials, transcripts, mutations or tasks are read/executed. Its identity-only API cannot support live task/idle animation. See [setup and limitations](../grok-bot.md). The user chose to leave this integration disconnected; no live provider sign-in was attempted.
+
+## Earlier workstation slice
+
 This change uses existing client/office extension seams. It adds no provider or backend command.
 
 Retain Claude, Codex, OpenCode, Grok CLI, Muse, DeepSeek Harness ACP, Pi, Cursor and custom CLI adapters as found in `server/providers`. Their hooks/session mechanisms differ; consult `docs/agents.md` rather than assuming equal observability. Grok Bot identity, APIs, lifecycle, permission model and event streams have not been verified. No Bot integration is shipped.

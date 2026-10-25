@@ -1,5 +1,11 @@
 # Asset manifest
 
+## Original simulation landmarks
+
+`src/client/models/simulation.glb` is original work for this fork under the repository MIT license: upholstered bed, raised-continent globe, oven, bookshelves and planning board. Source is `blender/scripts/build_simulation.py`, using the existing `aokit` and `Piece` helpers. Exported with Blender 5.2 LTS: **624,296 bytes, 28,448 triangles**, five roots, no textures, third-party packs, skeletons or clips. Regenerate with `blender --background --factory-startup --python blender/scripts/build_simulation.py`. The GLB test checks all five roots and the 30k triangle budget.
+
+The house reuses headquarters furniture and original kitchen/plants/lounge assets, with semantic PBR finishes in `simulation/house.ts`. It instances the 256 floor planks in three batches. House residents are procedural original capsule characters with independently posed limbs, eye shapes, name sprites and selection rings; each owns and disposes its geometry/materials/label. The static house resources have the page's lifetime. The globe's subdivided land surfaces follow the sphere rather than sinking below it. Legacy plant materials need their semantic color palette explicitly applied (their exported factors are neutral gray).
+
 Existing retained assets: `desk_props.glb`, `plants.glb`, `lounge.glb`, `kitchen.glb` and six dog GLBs. Creator/source: Agent Office contributors, Blender scripts in this repository; retain the root MIT license and attribution. No external commercial pack has been downloaded. Existing asset licensing is based on repository provenance, not a claim about unexamined third-party sources.
 
 ## Original headquarters furniture
