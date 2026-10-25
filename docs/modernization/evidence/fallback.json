@@ -1,0 +1,14 @@
+{
+  "facts": {
+    "view": "workstation",
+    "studioScreens": 0,
+    "deskAnchorsIntact": true,
+    "calls": 2659,
+    "triangles": 439673,
+    "geometries": 899,
+    "textures": 42,
+    "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 3060 Laptop GPU (0x00002520) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "revision": "186"
+  },
+  "errors": []
+}

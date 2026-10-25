@@ -1,0 +1,832 @@
+[
+  {
+    "file": "actions.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 378,
+    "tests": 5,
+    "pass": 5,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "agents.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 410,
+    "tests": 10,
+    "pass": 10,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "auth.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 377,
+    "tests": 3,
+    "pass": 3,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "bargames.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 405,
+    "tests": 8,
+    "pass": 8,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "building.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 631,
+    "tests": 3,
+    "pass": 3,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "cabinet.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 892,
+    "tests": 21,
+    "pass": 21,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "changes.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 4754,
+    "tests": 4,
+    "pass": 4,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "client-floors.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 508,
+    "tests": 4,
+    "pass": 4,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "client-help.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 434,
+    "tests": 1,
+    "pass": 1,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "client-registry.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 1189,
+    "tests": 22,
+    "pass": 22,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "client-store.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 569,
+    "tests": 8,
+    "pass": 8,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "client-structure.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 1850,
+    "tests": 3,
+    "pass": 3,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "clone.test.ts",
+    "code": 1,
+    "timedOut": false,
+    "ms": 28018,
+    "tests": 8,
+    "pass": 2,
+    "fail": 6,
+    "cancelled": 0
+  },
+  {
+    "file": "codex-usage.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 481,
+    "tests": 4,
+    "pass": 4,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "codex.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 603,
+    "tests": 7,
+    "pass": 7,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "config.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 890,
+    "tests": 6,
+    "pass": 6,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "cursor.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 1186,
+    "tests": 11,
+    "pass": 11,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "desk-props-model.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 432,
+    "tests": 6,
+    "pass": 6,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "dictation.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 382,
+    "tests": 11,
+    "pass": 11,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "docs.test.ts",
+    "code": 1,
+    "timedOut": false,
+    "ms": 1141,
+    "tests": 5,
+    "pass": 4,
+    "fail": 1,
+    "cancelled": 0
+  },
+  {
+    "file": "dog-breed.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 403,
+    "tests": 1,
+    "pass": 1,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "dog-model.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 484,
+    "tests": 33,
+    "pass": 33,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "driving.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 971,
+    "tests": 6,
+    "pass": 6,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "drops.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 374,
+    "tests": 4,
+    "pass": 4,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "drunk-vision.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 444,
+    "tests": 1,
+    "pass": 1,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "dsh.test.ts",
+    "code": 1,
+    "timedOut": false,
+    "ms": 25206,
+    "tests": 28,
+    "pass": 11,
+    "fail": 17,
+    "cancelled": 0
+  },
+  {
+    "file": "dungeon.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 592,
+    "tests": 7,
+    "pass": 7,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "emotes.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 380,
+    "tests": 5,
+    "pass": 5,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "floorplan.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 392,
+    "tests": 6,
+    "pass": 6,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "framerate.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 376,
+    "tests": 5,
+    "pass": 5,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "garage.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 386,
+    "tests": 9,
+    "pass": 9,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "github.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 342,
+    "tests": 8,
+    "pass": 8,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "grok.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 524,
+    "tests": 5,
+    "pass": 5,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "headquarters-model.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 435,
+    "tests": 2,
+    "pass": 2,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "history.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 775,
+    "tests": 6,
+    "pass": 6,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "hoop.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 423,
+    "tests": 11,
+    "pass": 11,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "install.test.ts",
+    "code": 1,
+    "timedOut": false,
+    "ms": 429,
+    "tests": 1,
+    "pass": 0,
+    "fail": 1,
+    "cancelled": 0
+  },
+  {
+    "file": "interaction.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 391,
+    "tests": 5,
+    "pass": 5,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "issue-progress.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 375,
+    "tests": 5,
+    "pass": 5,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "kitchen-model.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 484,
+    "tests": 6,
+    "pass": 6,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "lamplight-walls.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 501,
+    "tests": 1,
+    "pass": 1,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "laptop.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 527,
+    "tests": 5,
+    "pass": 5,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "leave-on-merge.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 1957,
+    "tests": 7,
+    "pass": 7,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "loading.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 382,
+    "tests": 9,
+    "pass": 9,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "lounge-model.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 439,
+    "tests": 9,
+    "pass": 9,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "machine.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 373,
+    "tests": 4,
+    "pass": 4,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "maps.test.ts",
+    "code": 1,
+    "timedOut": false,
+    "ms": 984,
+    "tests": 10,
+    "pass": 7,
+    "fail": 3,
+    "cancelled": 0
+  },
+  {
+    "file": "meeting-table.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 549,
+    "tests": 2,
+    "pass": 2,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "meetings.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 1745,
+    "tests": 14,
+    "pass": 14,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "models.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 376,
+    "tests": 15,
+    "pass": 15,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "muse.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 522,
+    "tests": 5,
+    "pass": 5,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "nav.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 543,
+    "tests": 4,
+    "pass": 4,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "needsyou.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 360,
+    "tests": 9,
+    "pass": 9,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "nextup.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 358,
+    "tests": 7,
+    "pass": 7,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "office-queue.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 634,
+    "tests": 9,
+    "pass": 9,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "office-workers.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 619,
+    "tests": 13,
+    "pass": 13,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "opencode.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 578,
+    "tests": 11,
+    "pass": 11,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "palette.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 373,
+    "tests": 10,
+    "pass": 10,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "pi.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 1798,
+    "tests": 6,
+    "pass": 6,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "plants-model.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 444,
+    "tests": 6,
+    "pass": 6,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "player.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 493,
+    "tests": 14,
+    "pass": 14,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "prompts.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 455,
+    "tests": 8,
+    "pass": 8,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "queue.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 509,
+    "tests": 22,
+    "pass": 22,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "relay.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 406,
+    "tests": 4,
+    "pass": 4,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "repos.test.ts",
+    "code": 1,
+    "timedOut": false,
+    "ms": 33401,
+    "tests": 9,
+    "pass": 6,
+    "fail": 3,
+    "cancelled": 0
+  },
+  {
+    "file": "rng.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 357,
+    "tests": 2,
+    "pass": 2,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "scenic.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 434,
+    "tests": 8,
+    "pass": 8,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "screen.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 479,
+    "tests": 3,
+    "pass": 3,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "seats.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 342,
+    "tests": 4,
+    "pass": 4,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "server-dispatch.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 3546,
+    "tests": 8,
+    "pass": 8,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "size.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 837,
+    "tests": 2,
+    "pass": 2,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "sky-clock.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 298,
+    "tests": 1,
+    "pass": 1,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "sky-fog.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 345,
+    "tests": 3,
+    "pass": 3,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "station.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 444,
+    "tests": 5,
+    "pass": 5,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "stations.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 384,
+    "tests": 4,
+    "pass": 4,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "sun.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 333,
+    "tests": 3,
+    "pass": 3,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "telescope.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 383,
+    "tests": 1,
+    "pass": 1,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "termkeys.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 353,
+    "tests": 4,
+    "pass": 4,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "tunnel.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 1716,
+    "tests": 8,
+    "pass": 8,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "usage.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 348,
+    "tests": 1,
+    "pass": 1,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "whereabouts.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 426,
+    "tests": 3,
+    "pass": 3,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "workers.test.ts",
+    "code": 1,
+    "timedOut": true,
+    "ms": 60202,
+    "tests": 0,
+    "pass": 0,
+    "fail": 0,
+    "cancelled": 0
+  },
+  {
+    "file": "worktrees.test.ts",
+    "code": 0,
+    "timedOut": false,
+    "ms": 17935,
+    "tests": 7,
+    "pass": 7,
+    "fail": 0,
+    "cancelled": 0
+  }
+]
