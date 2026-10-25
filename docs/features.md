@@ -2,7 +2,7 @@
 
 ## Bot House simulation
 
-The default view is now an overhead, cutaway house with pan, zoom, rotation, Bot selection and seven task landmarks. It starts empty. An optional, explicitly enabled Grok Bot bridge syncs your personal Bot names; that unofficial roster does not expose reliable task activity, so Bots wander with activity marked unavailable. Station animations are ready for a verified activity source. The [setup guide](grok-bot.md) explains the connection and its limits. Classic office is at `/office.html`; the features below describe that original office.
+The default view is now an overhead, cutaway house with pan, zoom, rotation, Bot selection and seven task landmarks. It starts empty. An optional, explicitly enabled Grok Bot bridge syncs your personal Bot names and roles. With `--activity` it also reads each Bot's transcript stream, so working Bots carry a task bubble, walk to the room that matches their request (or their role when the request is vague), glow their station and gesture there; quiet Bots go to bed, failed turns show a warning. The sidebar shows each Bot's room, task and how long it has been at it, plus a running “Around the house” feed. The [setup guide](grok-bot.md) explains the connection and its limits. Classic office is at `/office.html`; the features below describe that original office.
 
 ## Headquarters workstation preview
 

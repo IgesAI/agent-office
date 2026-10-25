@@ -7,6 +7,7 @@ import { emptySimulation, parseSimulation, placeForBot, SNAPSHOT_TTL } from '../
 import { botScope, readSimulation } from '../src/server/simulation/snapshot';
 import { reconcile } from '../src/client/simulation/feed';
 import { assignSpots, route, STATIONS } from '../src/client/simulation/movement';
+import { ActivityLog, describeChange } from '../src/client/simulation/log';
 import { openModel } from './glb';
 import { loginDestination } from '../src/shared/entry';
 const now=Date.now();
@@ -64,6 +65,22 @@ test('server isolates account snapshots and fails closed on malformed data',asyn
     await writeFile(path.join(scope,'snapshot.json'),'x'.repeat(1024*1024+1));
     assert.equal((await readSimulation(dir,'alice')).bots.length,0);
   } finally {await rm(dir,{recursive:true,force:true});}
+});
+test('role, source and since are whitelisted and cleared with stale activity',()=>{
+  const live=parseSimulation({...snapshot,bots:[{...bot,role:'Kitchen helper',activitySource:'task',since:now-5000}]},now);
+  assert.equal(live.bots[0].role,'Kitchen helper');assert.equal(live.bots[0].activitySource,'task');assert.equal(live.bots[0].since,now-5000);
+  const stale=parseSimulation(live,now+SNAPSHOT_TTL+1).bots[0];
+  assert.equal(stale.role,'Kitchen helper','identity details survive');assert.equal(stale.activitySource,undefined);assert.equal(stale.since,undefined);
+  assert.equal(parseSimulation({...snapshot,bots:[{...bot,activity:undefined,activitySource:'task'}]},now).bots[0].activitySource,undefined);
+});
+test('the activity feed narrates real changes only',()=>{
+  const log=new ActivityLog();
+  log.update([{...bot,state:'unknown'}],1);assert.equal(log.entries[0].text,'moved in');
+  assert.equal(log.update([{...bot,state:'unknown'}],2),false);
+  log.update([{...bot,task:'Fix the build'}],3);assert.match(log.entries[0].text,/started “Fix the build” in the build studio/);
+  log.update([{...bot,state:'idle'}],4);assert.equal(log.entries[0].text,'finished and went to rest');
+  log.update([],5);assert.equal(log.entries[0].text,'left the house');
+  assert.equal(describeChange(undefined,{...bot,state:'idle'}),'is resting');
 });
 test('all five original simulation landmarks exist within the asset budget',()=>{
   const model=openModel('simulation');

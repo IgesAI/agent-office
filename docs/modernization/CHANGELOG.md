@@ -7,6 +7,7 @@
 - Added seven task landmarks, original modeled furnishings, softened lighting, instanced flooring and resident animation/selection.
 - Added a versioned, authenticated, account-scoped roster projection with stale/error reconciliation and explicit unknown activity.
 - Prepared an optional pinned read-only Grok Bot bridge; the user chose to leave it disconnected. No live task activity claim is made.
+- Task awareness: `--activity` watches each Bot's transcript read-only, derives working/idle/error and a room from the request (role as fallback), and the house shows task bubbles, per-activity gestures, station glow, richer household cards and an activity feed.
 - Verified 36 focused tests, typecheck, build, real local login/API/file/UI flow, mobile layout, Classic office and labeled animation fixtures. Full-suite Windows limitations remain recorded in the simulation report.
 
 ## 2026-10-24 — audit and first visual increment

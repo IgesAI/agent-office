@@ -3,7 +3,7 @@ import { emptySimulation, parseSimulation, type SimulationSnapshot } from '../..
 export function reconcile(previous: SimulationSnapshot, next: SimulationSnapshot): SimulationSnapshot {
   if(next.connection==='connected') return next;
   const bots=previous.bots.length?previous.bots:next.bots;
-  return {...next,bots:bots.map(b=>({...b,state:'unknown',activity:undefined,task:undefined}))};
+  return {...next,bots:bots.map(b=>({...b,state:'unknown',activity:undefined,activitySource:undefined,task:undefined,since:undefined}))};
 }
 export function pollRoster(onChange: (snapshot: SimulationSnapshot)=>void) {
   let current=emptySimulation(),stopped=false;

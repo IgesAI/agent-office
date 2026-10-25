@@ -32,7 +32,7 @@ curl -fsSL https://raw.githubusercontent.com/AgentSystemLabs/agent-office/main/i
 
 ## What it is
 
-This fork now opens **Bot House**, a bird's-eye simulation with a coding studio, kitchen, rest nook, library, globe, planning board and common room. Pan, zoom and watch named Bots move between spaces. The house starts empty; an optional, experimental Grok Bot roster bridge adds your real Bots. Its roster currently supplies identities, not reliable task activity, so connected Bots wander with “Activity unavailable.” See [Bot House setup and limitations](docs/grok-bot.md).
+This fork now opens **Bot House**, a bird's-eye simulation with a coding studio, kitchen, rest nook, library, globe, planning board and common room. Pan, zoom and watch named Bots move between spaces. The house starts empty; an optional, experimental Grok Bot bridge adds your real Bots. Run it with `--activity` and it also watches each Bot's transcript (read-only): Bots show a speech bubble with what they were asked to do, walk to the matching room, gesture at their station, and rest when quiet, while the sidebar narrates changes. Without `--activity`, Bots wander with “Activity unavailable.” See [Bot House setup and limitations](docs/grok-bot.md).
 
 The original first-person office, its agent controls and live terminal workstations remain at **`/office.html`**, linked as Classic office. The 2D view remains at `/lite`. See the [simulation delivery report](docs/modernization/SIMULATION_REPORT.md) and the [earlier workstation report](docs/modernization/DELIVERY_REPORT.md).
 

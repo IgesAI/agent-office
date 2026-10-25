@@ -4,7 +4,7 @@
 
 The new default page reads an authenticated, account-scoped `/api/simulation` projection. It does not start workers or replace the worker store, WebSocket protocol, hooks, task queue or CLI providers. Classic office remains at `/office.html`; safe login destinations preserve that view and `/lite`. The overhead page uses no pointer lock. Its dialogs return focus to the canvas with a free pointer, following the user's new interaction direction.
 
-An optional **unofficial** Grok Bot roster bridge is supplied for source checkouts, disabled unless explicitly invoked. It uses a pinned external SDK and fresh login, a three-endpoint read-only network allowlist, in-memory tokens, scoped snapshots and bounded responses. No desktop credentials, transcripts, mutations or tasks are read/executed. Its identity-only API cannot support live task/idle animation. See [setup and limitations](../grok-bot.md). The user chose to leave this integration disconnected; no live provider sign-in was attempted.
+An optional **unofficial** Grok Bot roster bridge is supplied for source checkouts, disabled unless explicitly invoked. It uses a pinned external SDK and fresh login, a five-endpoint read-only network allowlist, in-memory tokens, scoped snapshots and bounded responses. No desktop credentials, mutations or tasks are read/executed. Transcripts are read only with the explicit `--activity` flag, and only a 140-character task line, category and state leave the bridge. See [setup and limitations](../grok-bot.md). The user chose to leave this integration disconnected; no live provider sign-in was attempted.
 
 ## Earlier workstation slice
 

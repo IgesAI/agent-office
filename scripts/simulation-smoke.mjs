@@ -35,8 +35,10 @@ try {
   await page.getByRole('button',{name:'Connect Grok Bot'}).first().click();await page.getByRole('button',{name:'Close',exact:true}).click();
   await page.getByRole('button',{name:'Rotate view'}).click();await page.getByRole('button',{name:'Show whole house'}).click();
   const places=['coding','cooking','rest','writing','travel','analysis','meeting'];
-  const bots=places.map((activity,i)=>({id:'preview-'+i,name:['Ada','Remy','Milo','Quill','Atlas','Sage','Piper'][i],state:activity==='rest'?'idle':'working',activity,color:['#7ca893','#cb986e','#a59ab5','#8da4b9','#bc9d69','#a2b775','#c2908a'][i],observedAt:Date.now()}));
+  const tasks=['Fix the flaky login test','Plan this week’s dinners','','Draft the launch newsletter','Lisbon itinerary for May','Compare sponsor pricing','Sync with the design team'];
+  const bots=places.map((activity,i)=>({id:'preview-'+i,name:['Ada','Remy','Milo','Quill','Atlas','Sage','Piper'][i],state:activity==='rest'?'idle':'working',activity,activitySource:'task',since:Date.now()-i*90000,...tasks[i]?{task:tasks[i]}:{},role:'Synthetic preview resident',color:['#7ca893','#cb986e','#a59ab5','#8da4b9','#bc9d69','#a2b775','#c2908a'][i],observedAt:Date.now()}));
   await snapshot(bots);await page.waitForFunction(()=>document.querySelectorAll('.bot-row').length===7);
+  await page.waitForFunction(()=>document.querySelectorAll('#activity-log li').length>=7);
   await page.evaluate(()=>{const banner=document.createElement('div');banner.id='test-banner';banner.textContent='ANIMATION PREVIEW · SYNTHETIC BOTS · NOT LIVE GROK ACTIVITY';Object.assign(banner.style,{position:'absolute',bottom:'110px',left:'24px',background:'#fff4d4',color:'#86652d',padding:'10px 13px',fontSize:'10px',borderRadius:'7px'});document.querySelector('.world').append(banner);});
   await page.waitForTimeout(18000);
   await page.screenshot({path:out+'/animation-preview.jpg',quality:85});
@@ -45,7 +47,8 @@ try {
   await page.waitForFunction(()=>document.querySelector('#selection')?.textContent.includes('Ada renamed'));
   await snapshot([], 'error');await page.waitForFunction(()=>document.querySelector('#connection')?.textContent==='Connection lost');
   assert.equal(await page.locator('.bot-row').count(),7);
-  assert.equal(await page.locator('.bot-row small').first().textContent(),'Activity unavailable');
+  assert.equal(await page.locator('.bot-row .activity-chip').first().textContent(),'Activity unavailable');
+  assert.equal(await page.locator('.bot-row .bot-task:not(.role)').count(),0,'task text is cleared with the connection');
   await snapshot(bots,'connected',Date.now()-60000);await page.waitForFunction(()=>document.querySelector('#connection')?.textContent==='Connection stale');
   await snapshot([]);await page.waitForFunction(()=>document.querySelectorAll('.bot-row').length===0);
   assert.equal(await page.locator('#selection').isVisible(),false);
@@ -54,6 +57,6 @@ try {
   await page.screenshot({path:out+'/mobile.jpg',quality:85,fullPage:true});
   await page.goto(base+'/office.html');await page.waitForFunction(()=>!document.querySelector('#loading')||document.querySelector('#loading')?.classList.contains('hidden'),null,{timeout:45000});
   assert.ok(await page.locator('canvas').count()>0);
-  await writeFile(out+'/verification.json',JSON.stringify({base,passed:['auth gate','empty roster','modal Escape and close','camera controls','seven synthetic activity stations','Bot selection','rename','failed poll retains identities','stale poll clears activity','deletion','390px layout','Classic office renders'],errors},null,2));
+  await writeFile(out+'/verification.json',JSON.stringify({base,passed:['auth gate','empty roster','modal Escape and close','camera controls','seven synthetic activity stations','task bubbles and activity feed','Bot selection','rename','failed poll retains identities','stale poll clears activity','deletion','390px layout','Classic office renders'],errors},null,2));
   assert.deepEqual(errors,[]);console.log('Simulation browser checks passed. Synthetic snapshot removed on exit.');
 } finally {if(wrote)await unlink(file);await browser.close();}

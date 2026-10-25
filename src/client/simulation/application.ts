@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import { buildHouse } from './house';
 import { HouseCamera } from './camera';
 import { Actors } from './actors';
+import { Beacons } from './beacons';
 import { pollRoster } from './feed';
 import { HouseUI, element } from './ui';
 
@@ -18,7 +19,7 @@ export async function startHouse() {
   sun.shadow.bias=-.0002;sun.shadow.normalBias=.035;sun.shadow.radius=3;scene.add(sun);
   const ground=new THREE.Mesh(new THREE.PlaneGeometry(200,200),new THREE.MeshStandardMaterial({color:'#efefe5',roughness:1}));
   ground.rotation.x=-Math.PI/2;ground.position.y=-.67;ground.receiveShadow=true;scene.add(ground);
-  const actors=new Actors(scene),ray=new THREE.Raycaster();
+  const actors=new Actors(scene),beacons=new Beacons(scene),ray=new THREE.Raycaster();
   const camera=new HouseCamera(canvas,(x,y)=>{
     const rect=canvas.getBoundingClientRect();
     ray.setFromCamera(new THREE.Vector2((x-rect.left)/rect.width*2-1,-(y-rect.top)/rect.height*2+1),camera.camera);
@@ -42,11 +43,11 @@ export async function startHouse() {
   const {missing}=await buildHouse(scene);
   const loading=element('loading');
   if(missing.length)loading.textContent='Some furnishings could not load. Refresh to try again.';else loading.hidden=true;
-  const stop=pollRoster(snapshot=>{actors.sync(snapshot.bots,paused);ui.render(snapshot);});
-  let last=performance.now();
+  const stop=pollRoster(snapshot=>{actors.sync(snapshot.bots,paused);beacons.sync(snapshot.bots);ui.render(snapshot);});
+  let last=performance.now(),clock=0;
   renderer.setAnimationLoop(now=>{
     const dt=Math.min((now-last)/1000,.05);last=now;
-    if(!document.hidden) { if(!paused)actors.update(dt);renderer.render(scene,camera.camera); }
+    if(!document.hidden) { if(!paused){clock+=dt;actors.update(dt);}beacons.update(clock);renderer.render(scene,camera.camera); }
   });
   canvas.dataset.ready='true';
   window.addEventListener('pagehide',event=>{if(!event.persisted){stop();observer.disconnect();renderer.setAnimationLoop(null);renderer.dispose();}});

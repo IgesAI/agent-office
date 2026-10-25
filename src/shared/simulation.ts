@@ -11,6 +11,12 @@ export interface SimulationBot {
   observedAt: number;
   task?: string;
   activity?: TaskPlace;
+  /** Whether the category came from the current request or only from the Bot's stated role. */
+  activitySource?: 'task' | 'role';
+  /** The Bot's own title/description from Grok Bot. */
+  role?: string;
+  /** When the current state began, Unix ms. */
+  since?: number;
 }
 export interface SimulationSnapshot {
   version: 1;
@@ -41,9 +47,12 @@ export function parseSimulation(value: unknown, now = Date.now()): SimulationSna
     const current = connection === 'connected' && now - observedAt <= SNAPSHOT_TTL;
     const state = current && BOT_STATES.includes(b.state as BotState) ? b.state as BotState : 'unknown';
     const activity = current && TASK_PLACES.includes(b.activity as TaskPlace) ? b.activity as TaskPlace : undefined;
+    const since = current && typeof b.since === 'number' && Number.isFinite(b.since) && b.since > 0 && b.since <= now + 5000 ? b.since : undefined;
     return { id: b.id, name: b.name, state, observedAt,
       color: typeof b.color === 'string' && /^#[a-f0-9]{6}$/i.test(b.color) ? b.color : '#659b8c',
-      task: current && typeof b.task === 'string' ? b.task.slice(0, 280) : undefined, activity };
+      task: current && typeof b.task === 'string' ? b.task.slice(0, 280) : undefined, activity,
+      activitySource: activity && (b.activitySource === 'task' || b.activitySource === 'role') ? b.activitySource : undefined,
+      role: typeof b.role === 'string' && b.role.trim() ? b.role.slice(0, 160) : undefined, since };
   });
   return { version: 1, source: 'grok-bot', connection, observedAt: v.observedAt, bots };
 }
